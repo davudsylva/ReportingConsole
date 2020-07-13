@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\megacorp.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\megacorp.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuppliesPrice.Contracts\SuppliesPrice.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

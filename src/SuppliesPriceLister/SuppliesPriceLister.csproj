@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>buildxact_supplies</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="humphries.csv" />
+    <None Remove="megacorp.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuppliesPrice.Core\SuppliesPrice.Core.csproj" />
+    <ProjectReference Include="..\SuppliesPrice.LocalPricing\SuppliesPrice.LocalPricing.csproj" />
+    <ProjectReference Include="..\SuppliesPrice.SourceCSV\SuppliesPrice.SourceCSV.csproj" />
+    <ProjectReference Include="..\SuppliesPrice.SourceJson\SuppliesPrice.SourceJson.csproj" />
+  </ItemGroup>
+
+</Project>
